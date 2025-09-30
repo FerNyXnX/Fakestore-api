@@ -1,0 +1,23 @@
+/* src/components/CategoryFilter/CategoryFilter.module.scss */
+@use "../../styles/variables" as v;
+
+.filter {
+  display: flex;
+  align-items: center;
+  gap: v.$space-3;
+
+  label {
+    color: v.$muted;
+  }
+
+  select {
+    padding: v.$space-2 v.$space-3;
+    border: 1px solid v.$border;
+    border-radius: 8px;
+    background: v.$bg;
+
+    &:focus-visible {
+      @include v.focus-ring;
+    }
+  }
+}
