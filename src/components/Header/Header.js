@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import styles from "./Header.module.scss";
 
 export default function Header() {
-  // Estado inicial: lee de localStorage o detecta preferencia del SO
+  // Estado inicial: lee de localStorage o detecta preferencia del Sistema
   const getInitialTheme = () => {
     const saved = localStorage.getItem("theme");
     if (saved) return saved;
