@@ -1,0 +1,67 @@
+@use "../../styles/variables" as v;
+
+.header {
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
+  transition: background 0.3s ease, border 0.3s ease;
+}
+
+.wrap {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: var(--space-4); /* antes: v.$space-4 */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4); /* antes: v.$space-4 */
+}
+
+.brand a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.25rem;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: var(--accent);
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4); /* antes: v.$space-4 */
+
+  a {
+    color: var(--text);
+    text-decoration: none;
+    padding: var(--space-2) var(--space-3); /* antes: v.$space-2 v.$space-3 */
+    border-radius: 8px;
+    transition: background 0.3s ease, color 0.3s ease;
+
+    &:hover {
+      background: rgba(100, 100, 100, 0.2);
+      color: var(--accent);
+    }
+
+    &.active {
+      background: rgba(100, 100, 100, 0.3);
+      color: var(--accent);
+      font-weight: 600;
+    }
+  }
+}
+
+.toggle {
+  @include v.button-reset;
+  background: var(--accent);
+  color: #fff;
+  padding: var(--space-2) var(--space-3); /* antes: v.$space-2 v.$space-3 */
+  border-radius: 8px;
+  transition: background 0.3s ease;
+
+  &:hover {
+    filter: brightness(1.1);
+  }
+}
