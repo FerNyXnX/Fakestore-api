@@ -1,0 +1,31 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+main {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: var(--text);
+  }
+}

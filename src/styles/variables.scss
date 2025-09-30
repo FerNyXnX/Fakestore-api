@@ -1,0 +1,45 @@
+/* Variables con soporte para light/dark */
+:root {
+  --brand: #111;
+  --bg: #ffffff;
+  --muted: #666;
+  --accent: #0a84ff;
+  --accent-rgb: 10, 132, 255; 
+  --danger: #e53935;
+  --border: #e5e7eb;
+  --text: #111;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+
+}
+
+[data-theme="dark"] {
+  --brand: #f5f5f5;
+  --bg: #1a1a1a;
+  --muted: #aaa;
+  --accent: #4dabf7;
+  --accent-rgb: 77, 171, 247; 
+  --danger: #ef5350;
+  --border: #333;
+  --text: #f5f5f5;
+}
+
+/* Mixins */
+@mixin button-reset {
+  appearance: none;
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
+@mixin focus-ring {
+  outline: 2px solid rgba(var(--accent-rgb), 0.5);
+  outline-offset: 2px;
+}
