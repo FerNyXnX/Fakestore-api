@@ -1,0 +1,27 @@
+/* src/pages/Categories/Categories.module.scss */
+@use "../../styles/variables" as v;
+
+.categories {
+  display: grid;
+  gap: v.$space-4;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: v.$space-3;
+    grid-template-columns: repeat(1, 1fr);
+
+    @media (min-width: 600px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  li {
+    padding: v.$space-3;
+    border: 1px solid v.$border;
+    border-radius: 10px;
+    background: v.$bg;
+  }
+}
