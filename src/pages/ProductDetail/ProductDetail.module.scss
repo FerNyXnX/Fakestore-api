@@ -1,0 +1,58 @@
+/* src/pages/ProductDetail/ProductDetail.module.scss */
+@use "../../styles/variables" as v;
+
+.detail {
+  display: grid;
+  gap: v.$space-5;
+
+  @media (min-width: 900px) {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+
+  img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background: #f6f7f9;
+    border-radius: v.$radius;
+    border: 1px solid v.$border;
+  }
+
+  .info {
+    display: grid;
+    gap: v.$space-3;
+
+    h2 {
+      margin: 0;
+    }
+
+    .price {
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+
+    .desc {
+      color: v.$muted;
+      line-height: 1.6;
+    }
+
+    .add {
+      @include v.button-reset;
+      background: v.$accent;
+      color: #fff;
+      padding: v.$space-3 v.$space-4;
+      border-radius: 10px;
+
+      &:disabled,
+      &[aria-disabled="true"] {
+        background: #cbd5e1;
+        cursor: not-allowed;
+      }
+
+      &:focus-visible {
+        @include v.focus-ring;
+      }
+    }
+  }
+}
